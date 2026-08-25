@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Farben - Silver/Chrome */
+  --color-primary: #c4c4cc;
+  --color-primary-hover: #e2e2e8;
+
+  --color-bg: #0a0a0c;
+  --color-surface: #16161a;
+  --color-text: #f5f5f7;
+  --color-text-muted: #9a9aa3;
+  --color-border: #26262c;
+
+  /* Schriften */
+  --font-heading: "Clash Display", sans-serif;
+  --font-body: "Satoshi", sans-serif;
+
+  /* Abstände */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Radius - bewusst kantig, kein verspielter Look */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Buttons */
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-text);
+}
