@@ -4,6 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nissan Skyline</title>
+    <link rel="stylesheet" href="./style/fonts.css" />
+    <link rel="stylesheet" href="./style/standart.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <a href="#" class="logo">KF</a>
+      <button class="menu-toggle" id="menu-toggle">
+        <img src="./assets/icons/menu.svg" alt="Menü öffnen" />
+      </button>
+    </header>
+    <nav class="menu-overlay" id="menu-overlay">
+      <button class="menu-close" id="menu-close">
+        <img src="./assets/icons/close.svg" alt="Menü- schließen" />
+      </button>
+      <ul class="menu-overlay-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#specs">Specs</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./assets/video/background-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+      <model-viewer
+        class="hero-model"
+        src="./assets/model/nissan-skyline-model.glb"
+        camera-controls
+        auto-rotate
+      ></model-viewer>
+      <h1 class="hero-title">NISSAN SKYLINE GTR-R34</h1>
+      <img
+        src="./assets/icons/scroll-down.svg"
+        alt="Scroll für mehr"
+        class="hero-scroll-indicator"
+      />
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/nissan-front.jpg"
+            alt="Nissan Skyline R34 Frontansicht"
+          />
+          <figcaption>Front</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/nissan-back.jpg"
+            alt="Nissan Sykline R34 Heckansicht"
+          />
+          <figcaption>Back</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/driver-side.jpg"
+            alt="Nissan Skyline R34 Fahrerseite"
+          />
+          <figcaption>Side View</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/front-interrior.jpg"
+            alt="Nissan Skyline R34 Innenraum"
+          />
+          <figcaption>Interior</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/nismo-wheels.jpg"
+            alt="Nissan Skyline R34 Nismo Felgen"
+          />
+          <figcaption>Nismo Wheels</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/nissan-drift.jpg"
+            alt="Nissan Skyline R34 im Drift"
+          />
+          <figcaption>Drift</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/engine-bay.jpg"
+            alt="Nissan Skyline R34 Motorraum"
+          />
+          <figcaption>Engine Bay</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img
+            src="./assets/img/trunk.jpg"
+            alt="Nissan Skyline R34 Kofferraum"
+          />
+          <figcaption>Trunk</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="specs" id="specs">
+      <div class="specs-grid" id="specs-grid"></div>
+      <!-- Specs will be dynamically inserted here-->
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Fabian Klemenz. All rights reserved.</p>
+    </footer>
+
+    <script src="./script/data.js"></script>
+    <script src="./script/template.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
