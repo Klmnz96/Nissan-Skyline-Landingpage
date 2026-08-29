@@ -1,6 +1,7 @@
 function init() {
   setupSpecs();
   setupMenu();
+  setupMenuClose();
 }
 
 function setupSpecs() {
@@ -16,4 +17,9 @@ function setupMenu() {
 function toggleMenu() {
   const menuOverlay = document.getElementById("menu-overlay");
   menuOverlay.classList.toggle("is-open");
+}
+
+function setupMenuClose() {
+  const menuCloseButton = document.getElementById("menu-close");
+  menuCloseButton.addEventListener("click", toggleMenu);
 }
