@@ -2,7 +2,8 @@ function init() {
   setupSpecs();
   setupMenu();
   setupMenuClose();
-  setuptMenuLinks();
+  setupMenuLinks();
+  setupScrollAnimations();
 }
 
 function setupSpecs() {
@@ -28,9 +29,24 @@ function setupMenuClose() {
   menuCloseButton.addEventListener("click", toggleMenu);
 }
 
-function setuptMenuLinks() {
+function setupMenuLinks() {
   const menuLinks = document.querySelectorAll(".menu-overlay-links a");
   menuLinks.forEach(function (link) {
     link.addEventListener("click", toggleMenu);
+  });
+}
+
+function setupScrollAnimations() {
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  });
+
+  const elements = document.querySelectorAll(".reveal");
+  elements.forEach(function (element) {
+    observer.observe(element);
   });
 }
