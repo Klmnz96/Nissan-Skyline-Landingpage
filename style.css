@@ -227,3 +227,79 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Specs */
+
+.specs {
+  padding: var(--space-24) var(--space-8);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spec-card {
+  position: relative;
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-border);
+  background-image:
+    linear-gradient(rgba(10, 10, 12, 0.82), rgba(10, 10, 12, 0.82)),
+    url("./assets/img/carbon.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+.spec-card:hover {
+  border-color: var(--color-primary);
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.spec-card-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.spec-card-value {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  padding: var(--space-8);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
